@@ -41,7 +41,7 @@ end
 
 puts first_anagram?("str", "rtt")
 
-# time complexity => O(n!)
+# time complexity => O(n!) ==> n * n!
 
 
 # ## Phase II:
@@ -60,8 +60,8 @@ def second_anagram?(string1, string2)
 
   string2 = string2.chars
 
-  string1.each_char.with_index do |c1, i1|
-    return false unless string2.include?(c1)
+  string1.each_char.with_index do |c1, i1| # => n
+    return false unless string2.include?(c1) # => n
     string2.delete_at(string2.index(c1))
   end
 
@@ -71,7 +71,7 @@ end
 puts "=======second anagram======="
 puts second_anagram?("str", "rtt")
 puts second_anagram?("str", "rts")
-#time complexity => O(n)
+# time complexity => O(n) ==> n^2
 
 #
 # ## Phase III:
@@ -122,7 +122,7 @@ puts fourth_anagram?("str", "rts")
 # Discuss the time complexity of your solutions together, then **call over your TA**
 # to look at them.
 
-# Fourth_anagram Time Complexity => O(n)
+# Fourth_anagram Time Complexity => O(n) ==> O(3n)
 
 
 #
